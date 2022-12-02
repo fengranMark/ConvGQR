@@ -1,0 +1,14 @@
+title = "generate cast collection script"
+
+
+# [Input]
+# passages
+car_passage_path = "./datasets/cast/paragraphCorpus/dedup.articles-paragraphs.cbor" 
+msmarco_passage_path = "./datasets/cast/ms_collection.tsv"
+duplicated_file_path = "./datasets/cast/msmarco.tsv"
+
+disable_tqdm = false
+
+
+# [Output]
+data_output_path = "./datasets/cast"
