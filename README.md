@@ -15,7 +15,7 @@ Main packages:
 
 ## 1. Download data and Preprocessing
 
-Four public datasets can be download from [QReCC](https://github.com/apple/ml-qrecc), [TopiOCQA](https://github.com/McGill-NLP/topiocqa), [CAsT-19 and CAsT-20](https://www.treccast.ai/). Preprocessing can refer "preprocess" folder.
+Four public datasets can be download from [QReCC](https://github.com/apple/ml-qrecc), [TopiOCQA](https://github.com/McGill-NLP/topiocqa), [CAsT-19 and CAsT-20](https://www.treccast.ai/). Data preprocessing can refer to "preprocess" folder.
 
 ## 2. Train ConvGQR
 
