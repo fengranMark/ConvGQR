@@ -1,0 +1,51 @@
+title = "the test script to test a model on topiocqa benchmarks"
+
+# [Model]
+query_encoder_checkpoint = "checkpoints/ad-hoc-ance-msmarco"   # !!!
+# query_encoder_checkpoint = "output/train_qrecc/Checkpoint/convq_model-0-epoch-39-step-18520-loss-0.0002749892883002758"   # !!!
+pretrained_passage_encoder = "checkpoints/ad-hoc-ance-msmarco"   # !!!
+
+max_concat_length = 512
+max_query_length = 64
+max_doc_length = 384
+seed = 42
+
+# [Model]
+model_type = "ANCE"
+
+# [Test]
+
+# since the passage collection is too big, we split it into several blocks and test block by block.
+# Finally merge them to get the final results.
+passage_block_num = 22 #  22 for qrecc
+
+per_gpu_eval_batch_size = 4
+n_gpu = 1
+use_gpu = true
+top_n = 100
+use_data_percent = 1
+rel_threshold = 1
+cross_validate = false
+disable_tqdm = false
+use_last_response = false
+use_PRF = false
+PRF_mode = "hard"
+test_type = "rewrite"
+eval_type = "oracle"
+
+
+# test_file_path = "datasets/qrecc/new_preprocessed/test.json"
+test_file_path = "output/qrecc/QR/test_GPTQR.json"
+test_file_path_2 = "output/qrecc/QR/test_QRIR_KD_answer_prefix.json"
+
+trec_gold_qrel_file_path = "datasets/qrecc/new_preprocessed/qrecc_qrel.tsv"
+# trec_gold_qrel_file_path = "datasets/qrecc/qrecc_qrel.tsv"
+PRF_file = "output/qrecc/dense_rel/test_bertpred_label_rawq_1.json"
+
+
+passage_collection_path= "datasets/qrecc/qrecc_collection.tsv"
+passage_embeddings_dir_path = "datasets/qrecc/embeds"
+passage_offset2pid_path = "datasets/qrecc/tokenized/offset2pid.pickle"
+
+# [Output]
+qrel_output_path = "output/qrecc/baseline_conv"   # will output two files: res.json and res.trec
