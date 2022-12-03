@@ -19,7 +19,7 @@ Four public datasets can be download from [QReCC](https://github.com/apple/ml-qr
 
 ## 2. Train ConvGQR
 
-To train ConvGQR, please run the following commands. The pre-trained language models we use for generation and passage encoding is T5-base{https://huggingface.co/t5-base} and ANCE{https://github.com/microsoft/ANCE}.
+To train ConvGQR, please run the following commands. The pre-trained language models we use for generation and passage encoding is [T5-base]{https://huggingface.co/t5-base} and [ANCE]{https://github.com/microsoft/ANCE}.
 
     
     python train_GQR.py --pretrained_query_encoder="checkpoints/T5-base" \ 
