@@ -19,7 +19,7 @@ Four public datasets can be download from [QReCC](https://github.com/apple/ml-qr
 
 ## 2. Train ConvGQR
 
-To train ConvGQR, please run the following:
+To train ConvGQR, please run the following commands. The pre-trained language models we use for generation and passage encoding is T5-base{https://huggingface.co/t5-base} and ANCE{https://github.com/microsoft/ANCE}.
 
     
     python train_GQR.py --pretrained_query_encoder="checkpoints/T5-base" \ 
@@ -59,7 +59,7 @@ Then we can use the trained model to generate rewritten query and expansion by r
 Now, we got both the rewritten query file and knowledge expansion produced by ConvGQR. Before performing retrieval to evaluate the reformulated queries, we should first establish index for both dense and sparse retrievers. 
 
 ### 4.1 Dense
-For dense retrieval, we use pre-trained ad-hoc search model{} to generate passage embeedings. Two scripts for each dataset are provided by running:
+For dense retrieval, we use the pre-trained ad-hoc search model ANCE to generate passage embeedings. Two scripts for each dataset are provided by running:
 
     python gen_tokenized_doc.py --config=Config/gen_tokenized_doc.toml
     python gen_doc_embeddings.py --config=Config/gen_doc_embeddings.toml
