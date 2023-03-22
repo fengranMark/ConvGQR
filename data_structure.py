@@ -851,3 +851,21 @@ class T5RewriterDataset_cast(Dataset):
             return collated_dict
 
         return collate_fn
+
+
+def padding_seq_to_same_length(input_ids, max_pad_length, pad_token = 0):
+    padding_length = max_pad_length - len(input_ids)
+    padding_ids = [pad_token] * padding_length
+    attention_mask = []
+
+    if padding_length <= 0:
+        attention_mask = [1] * max_pad_length
+        input_ids = input_ids[:max_pad_length]
+    else:
+        attention_mask = [1] * len(input_ids) + [0] * padding_length
+        input_ids = input_ids + padding_ids
+            
+    assert len(input_ids) == max_pad_length
+    assert len(attention_mask) == max_pad_length
+  
+    return input_ids, attention_mask
