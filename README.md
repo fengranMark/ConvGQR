@@ -1,5 +1,5 @@
 # ConvGQR
-This is the temporary repository of our ACL 2023 submission - ConvGQR: Generative Query Reformulation for Conversational Search.
+This is the temporary repository of our ACL 2023 accepted paper - ConvGQR: Generative Query Reformulation for Conversational Search.
 
 # Environment Dependency
 
