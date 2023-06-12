@@ -82,4 +82,4 @@ Now, we can perform retrieval to evaluate the reformulated queries by running:
     python test_{dataset_name}.py --config=Config/test_{dataset_name}.toml
     
     # for spase retrieval, dataset_name includes "qrecc" and "topiocqa"
-    python bm25_{dataset_name}.py
+    python bm25_{dataset_name}.py --config=Config/bm25_{dataset_name}.toml
