@@ -35,7 +35,7 @@ eval_type = "oracle"
 
 
 # test_file_path = "datasets/qrecc/new_preprocessed/test.json"
-test_file_path = "output/qrecc/QR/test_GPTQR.json"
+test_file_path = "output/qrecc/QR/test_QRIR_oracle_prefix.json"
 test_file_path_2 = "output/qrecc/QR/test_QRIR_KD_answer_prefix.json"
 
 trec_gold_qrel_file_path = "datasets/qrecc/new_preprocessed/qrecc_qrel.tsv"
