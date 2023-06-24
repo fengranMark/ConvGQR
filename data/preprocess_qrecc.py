@@ -468,12 +468,4 @@ if __name__ == "__main__":
     train_outputfile_with_doc = "new_preprocessed/train_with_doc.json"
     extract_doc_content_of_random_negs_for_train_file(qrecc_collection_path, train_inputfile, train_outputfile_with_doc)
 
-    qrecc_collection_path = "collections/qrecc/qrecc_collection/raw.tsv"
-    train_inputfile = "datasets/qrecc/preprocessed/train.json"
-    train_outputfile_with_doc = "datasets/qrecc/preprocessed/train_with_bm25_hard_neg.json"
-    extract_doc_content_of_bm25_hard_negs_for_train_file(qrecc_collection_path, train_inputfile, train_outputfile_with_doc)
-
-
-    statis_oracle = True
-    statis_info("/data/slc/mmr/CIS/Dataset/qrecc/new_preprocessed/train.json", statis_oracle)
     pass
