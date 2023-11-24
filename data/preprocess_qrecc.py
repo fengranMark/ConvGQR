@@ -79,7 +79,8 @@ def gen_qrecc_qrel(input_test_file, output_qrel_file, pid2rawpid_path):
 
     pid2rawpid = pload(pid2rawpid_path)
     rawpid2pid = {}
-    for pid, rawpid in enumerate(pid2rawpid):
+    #for pid, rawpid in enumerate(pid2rawpid):
+    for pid, rawpid in pid2rawpid.items():
         rawpid2pid[rawpid] = pid
 
     with open(output_qrel_file, "w") as f:
@@ -107,7 +108,8 @@ def gen_qrecc_train_test_files(train_inputfile,
     '''
     pid2rawpid = pload(pid2rawpid_path)
     rawpid2pid = {}
-    for pid, rawpid in enumerate(pid2rawpid):
+    #for pid, rawpid in enumerate(pid2rawpid):
+    for pid, rawpid in pid2rawpid.items():
         rawpid2pid[rawpid] = pid
     
     sid2utt = {}
