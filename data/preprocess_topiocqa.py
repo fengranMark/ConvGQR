@@ -256,8 +256,7 @@ if __name__ == "__main__":
     combine_data_test(dev, dev_gold, dev_rewrite, dev_new)
     convert_gold_to_trec(train_new, train_trec_gold)
     convert_gold_to_trec(dev_new, dev_trec_gold)
-    convert_gold_to_trec(train_rel, train_rel_gold)
-    convert_gold_to_trec(dev_rel, dev_rel_gold)
+
 
 
 
