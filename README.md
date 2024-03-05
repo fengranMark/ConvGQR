@@ -83,3 +83,13 @@ Now, we can perform retrieval to evaluate the reformulated queries by running:
     
     # for spase retrieval, dataset_name includes "qrecc" and "topiocqa"
     python bm25_{dataset_name}.py --config=Config/bm25_{dataset_name}.toml
+
+## Cite Format
+
+    @inproceedings{mo2023convgqr,
+      title={ConvGQR: Generative Query Reformulation for Conversational Search}, 
+      author={Fengran Mo and Kelong Mao and Yutao Zhu and Yihong Wu and Kaiyu Huang and Jian-Yun Nie},
+      booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics},
+      pages={4998–5012},
+      year={2023}
+    }
